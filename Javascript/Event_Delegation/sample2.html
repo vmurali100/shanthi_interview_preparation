@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Event deligation -->
+    <ul onclick="clickme()">
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+    </ul>
+    <script>
+        function clickme(){
+            console.log("you just click me")
+        }
+
+    </script>
+    <!-- event bubbling -->
+    <div onclick="onuser()">
+        
+        <ul onclick="adduser()">
+            <li onclick="clickme()">type</li>
+            <li>type</li>
+        </ul>
+
+    </div>
+    <script>
+        function onuser(){
+            console.log("this is from  div ")
+
+        }
+        function adduser(){
+            console.log("this is from ul")
+        }
+        function clickme(){
+            console.log("this is from child")
+        }
+    </script>
+    <!-- eventcapturing -->
+    <div onclick="onuser()">
+        <ul o>
+            <li>handle</li>
+            <li>handle</li>
+            <li>handle</li>
+            
+        </ul>
+    </div>
+
+    
+</body>
+</html>
