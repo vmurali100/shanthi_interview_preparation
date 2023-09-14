@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+        div{
+            padding: 20px;
+            background: red;
+        }
+        ul{
+            padding: 10px;
+            
+        }
+    </style>
+  </head>
+  <body>
+    <!-- <ul onclick="clickme()">
+        <li >Item 1</li>
+        <li >Item 2</li>
+        <li >Item 3</li>
+    </ul> -->
+
+    <!-- HTML Example for Event Bubling  -->
+    <!-- <div onclick="divClickHandler()">
+      <ul onclick="showMeSomeInfo()">
+        <li onclick="clickme()">Item</li>
+      </ul>
+    </div> -->
+
+    <div>
+      <ul>
+        <li>Item</li>
+      </ul>
+    </div>
+    <script>
+      // Attaching Event Handlers with DOM Method
+      document.querySelector("li").addEventListener("click", function () {
+        console.log("You Just Clicked on an LI  !!!");
+      },true);
+
+      document.querySelector("ul").addEventListener("click", function () {
+        console.log("You just Clicked on UL !!");
+      },true);
+
+      document.querySelector("div").addEventListener("click", function () {
+        console.log("You Just Clicked On Div");
+      },true);
+      //   function clickme() {
+      //     console.log("You Just Clicked on an Element !!!");
+      //   }
+
+      //   function showMeSomeInfo() {
+      //     console.log("You Just Clicked on Parent Element A11lso !!!");
+      //   }
+
+      //   function divClickHandler() {
+      //     console.log("Event Triggered on Div Element Also !!");
+      //   }
+    </script>
+  </body>
+</html>
