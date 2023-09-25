@@ -1,0 +1,12 @@
+{
+  "name": "shanthi_interview_preparation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js_questions.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
