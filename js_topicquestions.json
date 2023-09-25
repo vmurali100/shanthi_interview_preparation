@@ -1,0 +1,764 @@
+[
+  {
+    "Topic": "Variables and Data Types",
+    "Description": "Understanding variables, data types (e.g., strings, numbers, booleans), and variable declarations (var, let, const).",
+    "Questions": [
+      {
+        "Question": "What is a variable in JavaScript?",
+        "Answer": "A variable is a container that holds values. It allows you to store and manipulate data in a program."
+      },
+      {
+        "Question": "What are the different data types in JavaScript?",
+        "Answer": "JavaScript has several primitive data types, including string, number, boolean, null, undefined, and symbol. It also has a non-primitive data type called object."
+      },
+      {
+        "Question": "What is the difference between var, let, and const for variable declaration?",
+        "Answer": "var was traditionally used for variable declaration in JavaScript. It has function scope and can be redeclared. let and const were introduced in ES6. They have block scope, and const is used for variables that should not be reassigned after initialization."
+      },
+      {
+        "Question": "How do you declare and initialize a variable in JavaScript?",
+        "Answer": "You can declare a variable using var, let, or const, followed by the variable name. Initialization is the process of giving a variable its initial value. For example: 'let myVariable = 10;' declares and initializes a variable named 'myVariable' with a value of 10."
+      },
+      {
+        "Question": "What is a primitive data type?",
+        "Answer": "A primitive data type is a type of data that represents a single value, not an object. Examples include string, number, boolean, null, undefined, and symbol."
+      },
+      {
+        "Question": "What is type coercion in JavaScript?",
+        "Answer": "Type coercion is the process of converting one data type to another. It can be implicit (automatic) or explicit (done manually by the programmer). For example, when adding a number and a string, JavaScript may implicitly convert the number to a string for concatenation."
+      },
+      {
+        "Question": "What is the typeof operator in JavaScript?",
+        "Answer": "The typeof operator is used to determine the data type of a value or expression. For example, 'typeof 42' will return 'number'."
+      }
+    ]
+  },
+  {
+    "Topic": "Operators",
+    "Description": "Knowledge of arithmetic, comparison, logical, and assignment operators.",
+    "Questions": [
+      {
+        "Question": "What are arithmetic operators in JavaScript?",
+        "Answer": "Arithmetic operators are used for performing mathematical calculations. Common arithmetic operators include + (addition), - (subtraction), * (multiplication), / (division), and % (modulo for finding the remainder)."
+      },
+      {
+        "Question": "What is the difference between == and === operators in JavaScript?",
+        "Answer": "== (loose equality) compares values after type coercion, while === (strict equality) compares both values and data types. === is generally preferred for avoiding unexpected type coercion issues."
+      },
+      {
+        "Question": "Explain the ternary (conditional) operator in JavaScript.",
+        "Answer": "The ternary operator (condition ? expr1 : expr2) is a shorthand for an if-else statement. If the condition is true, expr1 is executed; otherwise, expr2 is executed."
+      },
+      {
+        "Question": "What are logical operators in JavaScript?",
+        "Answer": "Logical operators are used to perform logical operations on values. Common logical operators include && (logical AND), || (logical OR), and ! (logical NOT)."
+      },
+      {
+        "Question": "What is the assignment operator in JavaScript?",
+        "Answer": "The assignment operator (=) is used to assign a value to a variable. For example, 'x = 5;' assigns the value 5 to the variable x."
+      },
+      {
+        "Question": "Explain the concept of operator precedence in JavaScript.",
+        "Answer": "Operator precedence determines the order in which operators are evaluated in an expression. Operators with higher precedence are evaluated first. For example, multiplication (*) has higher precedence than addition (+). You can use parentheses to override precedence."
+      },
+      {
+        "Question": "What is the typeof operator used for with respect to variables and operators?",
+        "Answer": "The typeof operator is used to determine the data type of a value or expression. For example, 'typeof 42' will return 'number'. It is often used to check the data type of a variable or the result of an operation."
+      },
+      {
+        "Question": "What is short-circuiting in logical operators?",
+        "Answer": "Short-circuiting is a behavior of logical operators where the second operand is not evaluated if the outcome can be determined by only evaluating the first operand. For example, in '&&' if the first operand is false, the second operand is not evaluated because the result will always be false."
+      }
+    ]
+  },
+  {
+    "Topic": "Control Flow",
+    "Description": "Conditional statements (if, else if, else), loops (for, while), and switch statements.",
+    "Questions": [
+      {
+        "Question": "What are conditional statements in JavaScript?",
+        "Answer": "Conditional statements allow you to execute different code blocks based on specified conditions. The main conditional statements in JavaScript are if, else if, and else."
+      },
+      {
+        "Question": "Explain the 'if' statement and give an example.",
+        "Answer": "The 'if' statement is used to execute a block of code if a specified condition is true. If the condition is false, the code block is skipped. Example: \n\nif (condition) {\n  // Code to execute if condition is true\n}"
+      },
+      {
+        "Question": "What is an 'else if' statement?",
+        "Answer": "The 'else if' statement is used to specify a new condition if the first condition is false. It allows you to test multiple conditions and execute different code blocks accordingly."
+      },
+      {
+        "Question": "What is an 'else' statement?",
+        "Answer": "The 'else' statement is used to specify the code block to execute if the condition in the 'if' statement is false. It is the default case when all other conditions are not met."
+      },
+      {
+        "Question": "Explain the 'for' loop and give an example.",
+        "Answer": "The 'for' loop is used to repeatedly execute a block of code as long as a specified condition is true. It consists of an initialization, a condition, and an iteration. Example: \n\nfor (let i = 0; i < 5; i++) {\n  // Code to execute in each iteration\n}"
+      },
+      {
+        "Question": "Explain the 'while' loop and give an example.",
+        "Answer": "The 'while' loop is used to execute a block of code as long as a specified condition is true. It only has a condition and does not have an explicit initialization or iteration. Example: \n\nwhile (condition) {\n  // Code to execute as long as condition is true\n}"
+      },
+      {
+        "Question": "What is a 'switch' statement and when is it used?",
+        "Answer": "A 'switch' statement is used to select one of many code blocks to be executed. It is often used when you have multiple cases to consider and want to avoid a series of 'if-else if' statements."
+      },
+      {
+        "Question": "What is the purpose of a 'break' statement in a loop or switch statement?",
+        "Answer": "The 'break' statement is used to exit a loop or switch statement prematurely. It is often used to terminate a loop when a specific condition is met, or to prevent fall-through in a 'switch' statement."
+      },
+      {
+        "Question": "What is the difference between 'for' and 'while' loops?",
+        "Answer": "'for' loops are typically used when you know the number of iterations in advance, and they have an explicit initialization, condition, and iteration. 'while' loops are used when the number of iterations is not known in advance, and they only have a condition to check."
+      }
+    ]
+  },
+  {
+    "Topic": "Functions",
+    "Description": "Defining functions, parameters, return values, and understanding function scope.",
+    "Questions": [
+      {
+        "Question": "What is a function in JavaScript?",
+        "Answer": "A function is a reusable block of code that performs a specific task or calculates a value. Functions are defined using the 'function' keyword."
+      },
+      {
+        "Question": "How do you define a function in JavaScript?",
+        "Answer": "You can define a function using the 'function' keyword, followed by the function name, a list of parameters enclosed in parentheses, and the function body enclosed in curly braces. For example: \n\nfunction myFunction(param1, param2) {\n  // Function body\n}"
+      },
+      {
+        "Question": "What is a function parameter?",
+        "Answer": "A function parameter is a variable that is listed as part of the function's definition. Parameters are placeholders for values that will be passed into the function when it is called."
+      },
+      {
+        "Question": "How do you call (invoke) a function in JavaScript?",
+        "Answer": "You can call (invoke) a function by using its name followed by parentheses. For example: \n\nmyFunction(10, 20);"
+      },
+      {
+        "Question": "What is a return value in a function?",
+        "Answer": "A return value is the value that a function can send back to the code that called it. It is specified using the 'return' keyword in the function body. Functions may return a value or undefined if 'return' is not used."
+      },
+      {
+        "Question": "Explain function scope in JavaScript.",
+        "Answer": "JavaScript has function scope, which means that variables declared inside a function are only accessible within that function. This concept is often referred to as local scope."
+      },
+      {
+        "Question": "What is a callback function?",
+        "Answer": "A callback function is a function that is passed as an argument to another function and is executed after the completion of the parent function. Callbacks are commonly used in asynchronous operations."
+      },
+      {
+        "Question": "What are anonymous functions?",
+        "Answer": "Anonymous functions, also known as function expressions, are functions without a name. They are often used as arguments to other functions or for defining functions inline."
+      },
+      {
+        "Question": "What is a self-invoking function (IIFE) in JavaScript?",
+        "Answer": "An IIFE is a function that is defined and immediately invoked. It is often used to create a private scope and prevent variable pollution in the global scope."
+      },
+      {
+        "Question": "What is the difference between 'function declaration' and 'function expression'?",
+        "Answer": "Function declarations are hoisted in JavaScript, which means they can be used before they are declared in the code. Function expressions are not hoisted and can only be used after they are defined."
+      }
+    ]
+  },
+  {
+    "Topic": "Arrays and Objects",
+    "Description": "Working with arrays, objects, array methods (e.g., forEach, map, filter), and object properties.",
+    "Questions": [
+      {
+        "Question": "What is an array in JavaScript?",
+        "Answer": "An array is a data structure that allows you to store a collection of elements, which can be of any data type. Arrays are indexed by numbers, starting from 0."
+      },
+      {
+        "Question": "How do you create an array in JavaScript?",
+        "Answer": "You can create an array by enclosing a list of elements within square brackets ([]). For example: \n\nlet myArray = [1, 2, 3, 4, 5];"
+      },
+      {
+        "Question": "What are array methods in JavaScript?",
+        "Answer": "Array methods are built-in functions that can be used to perform operations on arrays. Common array methods include forEach, map, filter, reduce, and many more."
+      },
+      {
+        "Question": "Explain the 'forEach' method in arrays.",
+        "Answer": "'forEach' is a method used to iterate through each element in an array and apply a specified function to each element. It does not create a new array."
+      },
+      {
+        "Question": "What is the difference between 'map' and 'forEach'?",
+        "Answer": "'map' creates a new array by applying a function to each element of an existing array, while 'forEach' only iterates through the elements and does not create a new array."
+      },
+      {
+        "Question": "Explain the 'filter' method in arrays.",
+        "Answer": "'filter' creates a new array with all elements that pass a certain condition specified in a function. It returns a subset of the original array."
+      },
+      {
+        "Question": "What is an object in JavaScript?",
+        "Answer": "An object is a collection of key-value pairs where each key is a unique identifier for a value. Objects allow you to store related information in a structured way."
+      },
+      {
+        "Question": "How do you create an object in JavaScript?",
+        "Answer": "You can create an object by enclosing key-value pairs within curly braces ({}). For example: \n\nlet myObject = { key1: 'value1', key2: 'value2' };"
+      },
+      {
+        "Question": "How do you access object properties?",
+        "Answer": "You can access object properties using dot notation (e.g., object.property) or bracket notation (e.g., object['property'])."
+      },
+      {
+        "Question": "What is the 'this' keyword in JavaScript?",
+        "Answer": "The 'this' keyword refers to the context in which a function is called. In global scope, 'this' refers to the global object (e.g., 'window' in a browser). In a function, 'this' refers to the object that the function is a method of, or undefined in strict mode."
+      },
+      {
+        "Question": "What are JSON objects in JavaScript?",
+        "Answer": "JSON (JavaScript Object Notation) objects are a lightweight data interchange format. They are similar to JavaScript objects but follow a specific syntax and are commonly used for data exchange between a server and a web application."
+      }
+    ]
+  },
+  {
+    "Topic": "ES6 Features",
+    "Description": "Arrow functions, destructuring, template literals, let/const, and the spread/rest operator.",
+    "Questions": [
+      {
+        "Question": "What is ES6, and why is it important in JavaScript?",
+        "Answer": "ES6, also known as ECMAScript 2015, is a major update to the JavaScript language that introduced new features and improvements. It is important because it enhances the readability, maintainability, and functionality of JavaScript code."
+      },
+      {
+        "Question": "What are arrow functions in ES6?",
+        "Answer": "Arrow functions are a concise way to write functions in ES6. They have a shorter syntax and do not bind their own 'this' value, which can be advantageous in certain situations."
+      },
+      {
+        "Question": "Explain destructuring in ES6.",
+        "Answer": "Destructuring allows you to extract values from arrays or objects and assign them to variables with a more concise syntax. It simplifies the process of accessing and working with nested data structures."
+      },
+      {
+        "Question": "What are template literals in ES6?",
+        "Answer": "Template literals are string literals that allow you to embed expressions inside them using template placeholders (e.g., `${expression}`). They make it easier to create dynamic strings with variables and multiline strings."
+      },
+      {
+        "Question": "What is the difference between 'let' and 'const' for variable declaration in ES6?",
+        "Answer": "'let' and 'const' are block-scoped variables introduced in ES6. 'let' allows variables to be reassigned, while 'const' creates variables that cannot be reassigned after they are initialized."
+      },
+      {
+        "Question": "What is the spread operator (...) in ES6?",
+        "Answer": "The spread operator is used to spread the elements of an array or the properties of an object into another array or object. It is useful for creating copies, merging arrays, and simplifying function arguments."
+      },
+      {
+        "Question": "Explain the rest parameter (...) in ES6.",
+        "Answer": "The rest parameter allows you to represent an indefinite number of arguments as an array in a function. It is useful when you want to work with a variable number of function arguments."
+      },
+      {
+        "Question": "How do you use arrow functions for concise function syntax?",
+        "Answer": "Arrow functions have a concise syntax for simple functions. For example:\n\n`const add = (a, b) => a + b;`"
+      },
+      {
+        "Question": "What are destructuring assignment and how is it used?",
+        "Answer": "Destructuring assignment allows you to extract values from arrays or objects and assign them to variables in a single line. For example:\n\n`const [x, y] = [1, 2];`"
+      },
+      {
+        "Question": "Give an example of using template literals in ES6.",
+        "Answer": "Template literals allow you to embed expressions within strings. For example:\n\n`const name = 'John';\nconst greeting = `Hello, ${name}!`;`"
+      }
+    ]
+  },
+  {
+    "Topic": "Closures and Scopes",
+    "Description": "Understanding closures, lexical scope, and variable hoisting.",
+    "Questions": [
+      {
+        "Question": "What is a closure in JavaScript?",
+        "Answer": "A closure is a function that has access to variables from its outer (enclosing) scope, even after the outer function has finished executing. Closures are created when an inner function is returned or passed as an argument to another function."
+      },
+      {
+        "Question": "What is lexical (static) scope in JavaScript?",
+        "Answer": "Lexical scope, also known as static scope, determines variable accessibility based on where variables are declared in the code. In other words, it's based on the physical location of variables in the source code."
+      },
+      {
+        "Question": "How does a closure work in JavaScript?",
+        "Answer": "A closure captures and 'remembers' the variables from its outer scope, even when the outer function has finished executing. This allows the inner function to access and manipulate those variables."
+      },
+      {
+        "Question": "Give an example of a closure in JavaScript.",
+        "Answer": "```javascript\nfunction outerFunction() {\n  const outerVar = 'I am from outer scope';\n  function innerFunction() {\n    console.log(outerVar); // Accessing outerVar from the outer scope\n  }\n  return innerFunction;\n}\nconst closureExample = outerFunction();\nclosureExample(); // Prints 'I am from outer scope'\n```"
+      },
+      {
+        "Question": "What is variable hoisting in JavaScript?",
+        "Answer": "Variable hoisting is a JavaScript behavior where variable declarations (but not initializations) are moved to the top of their containing function or global scope during compilation. This means that you can use a variable before it's declared in your code, but it will be initialized with 'undefined' until the declaration is encountered."
+      },
+      {
+        "Question": "Explain the difference between 'var', 'let', and 'const' variable declarations with respect to scope and hoisting.",
+        "Answer": "'var' variables are function-scoped and are hoisted to the top of their function. 'let' and 'const' variables are block-scoped (e.g., within curly braces) and are not hoisted to the top of the block. Additionally, 'const' variables cannot be reassigned after initialization."
+      },
+      {
+        "Question": "What is the 'Temporal Dead Zone' (TDZ) in JavaScript?",
+        "Answer": "The Temporal Dead Zone is the period between entering a scope (e.g., a function or block) and the actual declaration of a variable. During this period, accessing the variable will result in a 'ReferenceError'. This concept applies to 'let' and 'const' variables and is designed to catch potential issues."
+      },
+      {
+        "Question": "How can you prevent variable hoisting issues in JavaScript?",
+        "Answer": "To prevent variable hoisting issues, it's best practice to declare variables at the top of their containing scope. For 'let' and 'const' variables, it's also important to avoid accessing them before their declaration within the same scope."
+      },
+      {
+        "Question": "What is a private variable in JavaScript?",
+        "Answer": "In JavaScript, private variables are variables that are not directly accessible or modifiable from outside their containing scope. Closures are often used to create private variables and maintain encapsulation."
+      },
+      {
+        "Question": "How can you create a private variable using closures?",
+        "Answer": "You can create a private variable by defining it within a closure (an inner function) and not exposing it in the outer scope. The outer function can return the inner function, allowing access to the private variable while preventing direct modification from outside."
+      }
+    ]
+  },
+  {
+    "Topic": "Promises and Async/Await",
+    "Description": "Handling asynchronous operations with Promises and async/await.",
+    "Questions": [
+      {
+        "Question": "What are Promises in JavaScript?",
+        "Answer": "A Promise in JavaScript is an object representing the eventual completion or failure of an asynchronous operation. It is used for handling asynchronous code and makes it easier to work with asynchronous functions."
+      },
+      {
+        "Question": "How do you create a Promise in JavaScript?",
+        "Answer": "You can create a Promise using the `Promise` constructor. It takes a callback function with two parameters: `resolve` and `reject`. Example:\n\n```javascript\nconst myPromise = new Promise((resolve, reject) => {\n  // Asynchronous code here\n  if (/* Operation successful */) {\n    resolve(result);\n  } else {\n    reject(error);\n  }\n});\n```"
+      },
+      {
+        "Question": "What are the states of a Promise in JavaScript?",
+        "Answer": "A Promise can be in one of three states: pending (initial state, neither fulfilled nor rejected), fulfilled (meaning the operation completed successfully), or rejected (meaning the operation failed)."
+      },
+      {
+        "Question": "How do you handle errors in a Promise chain?",
+        "Answer": "You can use the `.catch()` method at the end of a Promise chain to catch and handle errors that occur in any of the preceding Promises. This allows you to provide a fallback action in case of an error."
+      },
+      {
+        "Question": "What is chaining in Promises?",
+        "Answer": "Chaining in Promises is a technique where you can attach multiple `.then()` handlers to a Promise. Each `.then()` returns a new Promise, allowing you to perform sequential operations on the resolved values."
+      },
+      {
+        "Question": "What is the purpose of async/await in JavaScript?",
+        "Answer": "Async/await is a syntax feature in JavaScript that simplifies working with Promises. It allows you to write asynchronous code in a synchronous-like manner, making it easier to read and reason about."
+      },
+      {
+        "Question": "How do you define an asynchronous function using async/await?",
+        "Answer": "You can define an asynchronous function by prefixing the function declaration or expression with the `async` keyword. For example:\n\n```javascript\nasync function myAsyncFunction() {\n  // Asynchronous code\n  return result;\n}\n```"
+      },
+      {
+        "Question": "How do you use await inside an async function?",
+        "Answer": "The `await` keyword is used inside an async function to pause the execution of the function until the awaited Promise is resolved or rejected. It can only be used within an async function."
+      },
+      {
+        "Question": "What happens if a Promise is rejected inside an async function using await?",
+        "Answer": "If a Promise is rejected inside an async function using `await`, the function will throw an error. This can be caught using a try-catch block or by using a `.catch()` method on the Promise."
+      },
+      {
+        "Question": "Explain the difference between Promises and callbacks for handling asynchronous code.",
+        "Answer": "Callbacks are a traditional way of handling asynchronous code, while Promises provide a more structured and readable approach. Promises offer better error handling and allow you to avoid callback hell (nested callbacks)."
+      }
+    ]
+  },
+  {
+    "Topic": "DOM Manipulation",
+    "Description": "Accessing and modifying the Document Object Model (DOM) using JavaScript.",
+    "Questions": [
+      {
+        "Question": "What is the Document Object Model (DOM) in web development?",
+        "Answer": "The DOM is a programming interface for web documents. It represents the structure of a web page as a tree of objects, allowing you to interact with and manipulate web page content using JavaScript."
+      },
+      {
+        "Question": "How do you access elements in the DOM using JavaScript?",
+        "Answer": "You can access elements in the DOM using methods like `getElementById`, `querySelector`, `querySelectorAll`, and more. These methods allow you to retrieve elements by their IDs, CSS selectors, or other attributes."
+      },
+      {
+        "Question": "What is an event in the context of DOM manipulation?",
+        "Answer": "An event in the context of DOM manipulation refers to an action or occurrence on a web page, such as a user clicking a button or resizing the browser window. JavaScript can be used to listen for and respond to these events."
+      },
+      {
+        "Question": "How do you add an event listener to an HTML element using JavaScript?",
+        "Answer": "You can add an event listener to an HTML element using the `addEventListener` method. This method allows you to specify the event type (e.g., 'click') and a function to be executed when the event occurs."
+      },
+      {
+        "Question": "What is the 'innerHTML' property in the DOM?",
+        "Answer": "The `innerHTML` property allows you to get or set the HTML content within an element. You can use it to dynamically update the content of an element on a web page."
+      },
+      {
+        "Question": "How do you create a new HTML element using JavaScript and append it to the DOM?",
+        "Answer": "You can create a new HTML element using the `document.createElement` method, set its attributes and content, and then append it to the DOM using methods like `appendChild` or `insertBefore`."
+      },
+      {
+        "Question": "What is the purpose of the 'classList' property in the DOM?",
+        "Answer": "The `classList` property allows you to add, remove, or toggle CSS classes on an HTML element. It is commonly used for styling and adding or removing classes based on user interactions."
+      },
+      {
+        "Question": "What is event delegation in DOM manipulation?",
+        "Answer": "Event delegation is a technique where you attach a single event listener to a common ancestor of multiple elements instead of attaching listeners to each individual element. It is useful for efficiently handling events on dynamically created or large numbers of elements."
+      },
+      {
+        "Question": "What is the purpose of the 'window' object in the DOM?",
+        "Answer": "The `window` object represents the global window in a browser environment. It provides access to various browser-related functionalities and properties, such as the `localStorage`, `setTimeout`, and `location` objects."
+      },
+      {
+        "Question": "Explain the difference between 'innerHTML' and 'textContent' properties in the DOM.",
+        "Answer": "`innerHTML` sets or retrieves the HTML content of an element, including tags and formatting. `textContent` sets or retrieves only the text content of an element, excluding HTML tags."
+      }
+    ]
+  },
+  {
+    "Topic": "Events",
+    "Description": "Handling user events (e.g., click, submit) and event listeners.",
+    "Questions": [
+      {
+        "Question": "What are events in web development?",
+        "Answer": "Events in web development refer to user actions or occurrences on a web page, such as clicking a button, submitting a form, hovering over an element, or resizing the browser window."
+      },
+      {
+        "Question": "How do you add an event listener to an HTML element using JavaScript?",
+        "Answer": "You can add an event listener to an HTML element using the `addEventListener` method. This method allows you to specify the event type (e.g., 'click') and a function to be executed when the event occurs."
+      },
+      {
+        "Question": "What is event propagation in JavaScript?",
+        "Answer": "Event propagation refers to the order in which events are handled when they occur on nested or overlapping elements. There are two phases of event propagation: capturing phase and bubbling phase."
+      },
+      {
+        "Question": "What is event delegation and why is it useful?",
+        "Answer": "Event delegation is a technique where you attach a single event listener to a common ancestor of multiple elements instead of attaching listeners to each individual element. It is useful for efficiently handling events on dynamically created or large numbers of elements."
+      },
+      {
+        "Question": "What is the 'this' keyword in the context of event handlers?",
+        "Answer": "In the context of event handlers, the 'this' keyword refers to the HTML element to which the event listener is attached. It allows you to reference and manipulate the element that triggered the event."
+      },
+      {
+        "Question": "What are event objects in JavaScript?",
+        "Answer": "An event object is an object that contains information about the event that occurred, such as the type of event, the target element, mouse coordinates, and more. Event objects are automatically passed to event handler functions as a parameter."
+      },
+      {
+        "Question": "What is event propagation and how does it work?",
+        "Answer": "Event propagation is the process by which events are propagated or transmitted through the DOM tree. It consists of two phases: the capturing phase and the bubbling phase. In the capturing phase, events are captured from the outermost ancestor to the target element. In the bubbling phase, events are bubbled up from the target element to the outermost ancestor."
+      },
+      {
+        "Question": "What is the difference between 'addEventListener' and inline event handlers in HTML?",
+        "Answer": "'addEventListener' is a JavaScript method that allows you to attach event listeners to elements dynamically using JavaScript code. Inline event handlers are attributes added directly to HTML elements (e.g., 'onclick') and are defined within the HTML markup. Using 'addEventListener' is generally considered a better practice as it separates JavaScript from HTML."
+      },
+      {
+        "Question": "How do you prevent the default behavior of an event?",
+        "Answer": "You can prevent the default behavior of an event by calling the 'preventDefault()' method on the event object. This is often used to prevent form submission or anchor link navigation, among other default behaviors."
+      },
+      {
+        "Question": "What are commonly used mouse events in JavaScript?",
+        "Answer": "Commonly used mouse events in JavaScript include 'click', 'mouseover', 'mouseout', 'mousedown', 'mouseup', 'mousemove', and 'dblclick'. These events allow you to respond to mouse interactions on web pages."
+      }
+    ]
+  },
+  {
+    "Topic": "Error Handling",
+    "Description": "Using try-catch for error handling and understanding common JavaScript errors.",
+    "Questions": [
+      {
+        "Question": "What is error handling in JavaScript?",
+        "Answer": "Error handling in JavaScript involves the process of identifying, catching, and responding to errors that occur during the execution of a program. It helps prevent unexpected crashes and provides a way to gracefully handle issues."
+      },
+      {
+        "Question": "What is the purpose of the 'try-catch' statement in JavaScript?",
+        "Answer": "The 'try-catch' statement is used to handle exceptions (errors) that may occur in a block of code. The 'try' block contains the code that might throw an error, and the 'catch' block contains the code to handle the error if one occurs."
+      },
+      {
+        "Question": "What is an exception in JavaScript?",
+        "Answer": "An exception is an error or unexpected event that occurs during the execution of a program. Exceptions can be caused by various factors, such as invalid input, unexpected conditions, or programming mistakes."
+      },
+      {
+        "Question": "How do you use the 'try-catch' statement to handle errors?",
+        "Answer": "You enclose the code that might throw an error within a 'try' block, and you provide a 'catch' block to handle the error if it occurs. If an error occurs in the 'try' block, control is transferred to the 'catch' block."
+      },
+      {
+        "Question": "What is the purpose of the 'finally' block in 'try-catch-finally' statements?",
+        "Answer": "The 'finally' block is optional and is used to specify code that will be executed regardless of whether an error occurred in the 'try' block or not. It is often used for cleanup tasks, such as releasing resources."
+      },
+      {
+        "Question": "What is an 'error object' in JavaScript?",
+        "Answer": "An error object is an object that represents an error and contains information about the error, such as its name, message, and stack trace. Error objects are automatically created when an error occurs and can be caught and examined in a 'catch' block."
+      },
+      {
+        "Question": "What are some common built-in error types in JavaScript?",
+        "Answer": "Some common built-in error types in JavaScript include 'SyntaxError' (for syntax errors), 'ReferenceError' (for accessing undefined variables), 'TypeError' (for type-related errors), and 'RangeError' (for out-of-range values)."
+      },
+      {
+        "Question": "How do you create custom (user-defined) errors in JavaScript?",
+        "Answer": "You can create custom errors in JavaScript by defining your own error constructor function and inheriting from the 'Error' object. This allows you to throw and catch custom error objects."
+      },
+      {
+        "Question": "What is the difference between 'throw' and 'throw new Error()' in JavaScript?",
+        "Answer": "'throw' is used to throw any value as an exception, while 'throw new Error()' is commonly used to throw a new instance of the 'Error' object with a specified error message. Using 'throw new Error()' provides more structured error handling."
+      },
+      {
+        "Question": "Why is error handling important in JavaScript?",
+        "Answer": "Error handling is important in JavaScript to ensure that unexpected issues or errors do not lead to program crashes or security vulnerabilities. It allows developers to gracefully handle errors and provide meaningful feedback to users."
+      }
+    ]
+  },
+  {
+    "Topic": "JSON",
+    "Description": "Working with JSON data, parsing, and stringification.",
+    "Questions": [
+      {
+        "Question": "What is JSON in web development?",
+        "Answer": "JSON (JavaScript Object Notation) is a lightweight data interchange format used for representing structured data. It is often used for data exchange between a server and a web application, as well as for configuration files."
+      },
+      {
+        "Question": "What is the basic structure of a JSON object?",
+        "Answer": "A JSON object is a collection of key-value pairs where keys are strings enclosed in double quotes and values can be strings, numbers, booleans, objects, arrays, or 'null'. The key-value pairs are separated by colons, and multiple pairs are separated by commas."
+      },
+      {
+        "Question": "How do you represent an array in JSON?",
+        "Answer": "An array in JSON is represented as a list of values enclosed in square brackets ([]). Values within an array can be of any JSON data type, including other arrays or objects."
+      },
+      {
+        "Question": "What is JSON parsing in JavaScript?",
+        "Answer": "JSON parsing is the process of converting a JSON string into a JavaScript object. This allows you to work with the data in a structured manner within your JavaScript code."
+      },
+      {
+        "Question": "How do you parse a JSON string in JavaScript?",
+        "Answer": "You can parse a JSON string in JavaScript using the 'JSON.parse()' method. It takes the JSON string as input and returns a JavaScript object."
+      },
+      {
+        "Question": "What is JSON stringification in JavaScript?",
+        "Answer": "JSON stringification is the process of converting a JavaScript object into a JSON-formatted string. This is useful when you need to send data to a server or store it in a file in JSON format."
+      },
+      {
+        "Question": "How do you convert a JavaScript object into a JSON string?",
+        "Answer": "You can convert a JavaScript object into a JSON string using the 'JSON.stringify()' method. It takes the object as input and returns a JSON-formatted string."
+      },
+      {
+        "Question": "What is the purpose of the 'JSON.stringify()' method's second argument (replacer) in JavaScript?",
+        "Answer": "The 'JSON.stringify()' method's second argument, called 'replacer', is an optional function that can be used to filter and transform values in the resulting JSON string. It allows you to customize the stringification process."
+      },
+      {
+        "Question": "How do you handle errors when parsing JSON in JavaScript?",
+        "Answer": "When parsing JSON using 'JSON.parse()', you should wrap it in a try-catch block to handle potential errors, such as invalid JSON syntax. This allows you to gracefully handle parsing failures."
+      },
+      {
+        "Question": "What is the difference between JSON and JavaScript object literals?",
+        "Answer": "JSON is a data interchange format used for data exchange between systems and must adhere to strict syntax rules, including double-quoted keys and string values. JavaScript object literals, on the other hand, are used for defining objects within JavaScript code and can have unquoted keys and various data types for values."
+      }
+    ]
+  },
+  {
+    "Topic": "Modules and Imports",
+    "Description": "Organizing code with modules and using import/export statements.",
+    "Questions": [
+      {
+        "Question": "What are modules in JavaScript?",
+        "Answer": "Modules in JavaScript are a way to organize and structure code by encapsulating related functionality into separate files. Each module typically represents a specific feature or part of an application."
+      },
+      {
+        "Question": "What is the purpose of using modules in JavaScript?",
+        "Answer": "Using modules helps improve code maintainability, reusability, and organization. It allows developers to encapsulate functionality, avoid global scope pollution, and create a modular and scalable codebase."
+      },
+      {
+        "Question": "How do you export functionality from a module in JavaScript?",
+        "Answer": "You can export functionality from a module using the 'export' keyword. There are two common ways to export: 'export' statements (e.g., 'export function myFunction()') and default exports (e.g., 'export default myFunction')."
+      },
+      {
+        "Question": "How do you import functionality from a module in JavaScript?",
+        "Answer": "You can import functionality from a module using the 'import' keyword. You can import named exports (e.g., 'import { myFunction } from './module'') and default exports (e.g., 'import myFunction from './module'')."
+      },
+      {
+        "Question": "What is a default export in JavaScript modules?",
+        "Answer": "A default export is a special export that represents the primary functionality of a module. You can have only one default export per module, and when imported, it can be given any name you choose."
+      },
+      {
+        "Question": "How do you import multiple named exports from a module in a single statement?",
+        "Answer": "You can import multiple named exports from a module in a single statement by enclosing their names in curly braces and separating them with commas. For example, 'import { func1, func2 } from './module'.'"
+      },
+      {
+        "Question": "What is a module's file extension in JavaScript?",
+        "Answer": "The file extension for JavaScript modules is typically '.mjs' for ES modules (ECMAScript modules). However, in some environments, such as Node.js, '.js' can also be used."
+      },
+      {
+        "Question": "What is the difference between default and named exports in JavaScript modules?",
+        "Answer": "Default exports are used for the primary functionality of a module and can be imported with any name. Named exports are used for secondary exports and must be imported with the exact exported name."
+      },
+      {
+        "Question": "How do you create a circular dependency between modules?",
+        "Answer": "Circular dependencies occur when two or more modules depend on each other directly or indirectly. To avoid circular dependencies, it's essential to structure your code and dependencies carefully."
+      },
+      {
+        "Question": "What are module loaders and bundlers in JavaScript?",
+        "Answer": "Module loaders and bundlers are tools that help manage module dependencies in JavaScript applications. Loaders load modules at runtime, while bundlers bundle multiple modules into a single file for production deployment."
+      }
+    ]
+  },
+  {
+    "Topic": "Testing",
+    "Description": "Basic understanding of testing frameworks (e.g., Jest) and writing test cases.",
+    "Questions": [
+      {
+        "Question": "What is software testing in the context of programming?",
+        "Answer": "Software testing is the process of evaluating a software application to identify and fix any issues or defects. It involves running the software and verifying that it behaves as expected and meets the specified requirements."
+      },
+      {
+        "Question": "Why is testing important in software development?",
+        "Answer": "Testing is important in software development because it helps ensure the quality, reliability, and correctness of software. It helps catch bugs, prevent issues in production, and provides confidence in the software's functionality."
+      },
+      {
+        "Question": "What is a testing framework in programming?",
+        "Answer": "A testing framework is a set of tools and conventions used for organizing, writing, and running tests. It provides a structure for defining test cases, running them, and reporting the results."
+      },
+      {
+        "Question": "What is Jest, and what is its role in JavaScript testing?",
+        "Answer": "Jest is a popular JavaScript testing framework that is often used for testing JavaScript applications, including React and Node.js applications. It provides tools for writing and running tests, as well as features like test runners and assertion libraries."
+      },
+      {
+        "Question": "What is a unit test in software testing?",
+        "Answer": "A unit test is a type of test that focuses on testing individual units or components of a software application in isolation. It typically tests a specific function, method, or module."
+      },
+      {
+        "Question": "What is the Arrange-Act-Assert (AAA) pattern in unit testing?",
+        "Answer": "The Arrange-Act-Assert (AAA) pattern is a common structure for organizing unit tests. In the 'Arrange' phase, you set up the test by creating objects and initializing variables. In the 'Act' phase, you perform the action or operation being tested. In the 'Assert' phase, you check that the result matches the expected outcome."
+      },
+      {
+        "Question": "What is a test case and how is it typically structured?",
+        "Answer": "A test case is a specific scenario or condition that you want to test. It is typically structured with a description of the scenario, the setup (Arrange), the action (Act), and the expected outcome (Assert). Test cases are used to document and automate testing."
+      },
+      {
+        "Question": "What are assertions in unit testing?",
+        "Answer": "Assertions are statements or conditions that you define in your tests to check if the actual result matches the expected result. They are used to determine whether a test has passed or failed."
+      },
+      {
+        "Question": "What is test-driven development (TDD) and how does it work?",
+        "Answer": "Test-driven development (TDD) is a software development approach where tests are written before the actual code. Developers start by writing a failing test case for the desired functionality, then write code to make the test pass, and finally refactor the code while ensuring the test still passes."
+      },
+      {
+        "Question": "What is a test runner, and what is its role in testing?",
+        "Answer": "A test runner is a component of a testing framework that is responsible for executing tests and reporting the results. It helps automate the process of running multiple test cases and provides feedback on which tests passed or failed."
+      }
+    ]
+  },
+  {
+    "Topic": "Debugging",
+    "Description": "Using browser developer tools and debugging techniques.",
+    "Questions": [
+      {
+        "Question": "What is debugging in software development?",
+        "Answer": "Debugging is the process of identifying, analyzing, and fixing errors or defects in software code. It involves finding and resolving issues that cause the software to behave incorrectly or unexpectedly."
+      },
+      {
+        "Question": "Why is debugging important in software development?",
+        "Answer": "Debugging is important because it helps developers find and eliminate issues in their code. It ensures that the software functions correctly, behaves as expected, and meets user requirements."
+      },
+      {
+        "Question": "What are browser developer tools, and how do you access them?",
+        "Answer": "Browser developer tools are built-in tools in web browsers that allow developers to inspect, debug, and profile web pages and applications. You can typically access them by right-clicking on a web page and selecting 'Inspect' or by pressing 'F12' or 'Ctrl+Shift+I' (on Windows) or 'Cmd+Option+I' (on macOS)."
+      },
+      {
+        "Question": "What is a breakpoint, and how do you set one in browser developer tools?",
+        "Answer": "A breakpoint is a point in your code where the debugger pauses execution, allowing you to inspect the program's state. You can set a breakpoint by clicking on the line number in the source code panel of the developer tools or by adding 'debugger;' in your JavaScript code."
+      },
+      {
+        "Question": "How do you use the console for debugging in browser developer tools?",
+        "Answer": "The console is a powerful tool for debugging in developer tools. You can use 'console.log()' to print values, 'console.error()' for error messages, 'console.warn()' for warnings, and 'console.assert()' to assert conditions. Additionally, you can interactively run JavaScript code in the console."
+      },
+      {
+        "Question": "What is step-by-step debugging, and how do you use it in developer tools?",
+        "Answer": "Step-by-step debugging allows you to execute code one step at a time, helping you understand how the program flows and find issues. You can use 'step into,' 'step over,' and 'step out of' commands in developer tools to navigate through code execution step by step."
+      },
+      {
+        "Question": "What is a watch expression in debugging, and how do you use it?",
+        "Answer": "A watch expression is an expression that you can track during debugging to monitor its value. You can add watch expressions in developer tools, and they will update in real-time as you step through your code."
+      },
+      {
+        "Question": "What is a call stack in debugging?",
+        "Answer": "The call stack is a data structure that keeps track of function calls in your code. It helps you understand the flow of execution and can be inspected in browser developer tools to identify the current execution context."
+      },
+      {
+        "Question": "What are common debugging techniques for finding and fixing issues in code?",
+        "Answer": "Common debugging techniques include setting breakpoints, using console statements for logging, inspecting variables and objects, tracing the flow of code execution, and gradually narrowing down the scope of the problem."
+      },
+      {
+        "Question": "What is a debugger statement in JavaScript?",
+        "Answer": "A 'debugger' statement is a keyword used in JavaScript code to trigger a breakpoint when encountered. It pauses code execution and opens the debugger in browser developer tools, allowing you to inspect the program state."
+      }
+    ]
+  },
+  {
+    "Topic": "Version Control (e.g., Git)",
+    "Description": "Understanding version control concepts and basic Git commands.",
+    "Questions": [
+      {
+        "Question": "What is version control in software development?",
+        "Answer": "Version control is a system that tracks and manages changes to files and code over time. It allows multiple developers to collaborate on a project, keeps a history of changes, and provides the ability to revert to previous versions."
+      },
+      {
+        "Question": "Why is version control important in software development?",
+        "Answer": "Version control is important because it helps developers manage and track changes, collaborate effectively, maintain a history of code modifications, and recover from mistakes or errors easily."
+      },
+      {
+        "Question": "What is Git, and how does it relate to version control?",
+        "Answer": "Git is a widely used distributed version control system (DVCS) that allows developers to track changes to their codebase. It provides a decentralized repository structure, making it easy to work offline and collaborate with others."
+      },
+      {
+        "Question": "What is a repository in Git?",
+        "Answer": "A Git repository is a directory that contains all the files, folders, and version history for a project. It serves as a centralized location for storing and managing code."
+      },
+      {
+        "Question": "What is a commit in Git?",
+        "Answer": "A commit in Git represents a snapshot of the code at a specific point in time. It includes changes to one or more files along with a commit message describing the purpose of the changes."
+      },
+      {
+        "Question": "What is the difference between 'git pull' and 'git push'?",
+        "Answer": "'git pull' is used to fetch changes from a remote repository and merge them into the local branch, updating your local code with the latest changes. 'git push' is used to push your local changes to a remote repository, making them accessible to others."
+      },
+      {
+        "Question": "How do you create a new branch in Git?",
+        "Answer": "You can create a new branch in Git using the 'git branch' command followed by the branch name (e.g., 'git branch new-branch'). To switch to the new branch, you can use 'git checkout new-branch' or 'git switch new-branch' (Git 2.23 and later)."
+      },
+      {
+        "Question": "What is a merge conflict in Git, and how do you resolve it?",
+        "Answer": "A merge conflict occurs when Git cannot automatically merge two branches due to conflicting changes in the same part of a file. To resolve a merge conflict, you need to manually edit the conflicting files, choose the desired changes, and commit the resolved state."
+      },
+      {
+        "Question": "What is a Git commit message, and why is it important?",
+        "Answer": "A Git commit message is a brief description of the changes made in a commit. It is important because it provides context and history for each commit, making it easier for collaborators to understand the purpose of changes."
+      },
+      {
+        "Question": "How do you clone a Git repository?",
+        "Answer": "To clone a Git repository, you use the 'git clone' command followed by the repository's URL (e.g., 'git clone https://github.com/username/repo.git'). This creates a copy of the remote repository on your local machine."
+      }
+    ]
+  },
+  {
+    "Topic": "Basic Algorithms and Data Structures",
+    "Description": "Familiarity with common algorithms (e.g., sorting, searching) and data structures (e.g., arrays, objects).",
+    "Questions": [
+      {
+        "Question": "What are algorithms and why are they important in programming?",
+        "Answer": "Algorithms are step-by-step sets of instructions for solving specific problems or performing tasks. They are fundamental in programming because they determine how efficiently and accurately tasks can be accomplished."
+      },
+      {
+        "Question": "What is a data structure in programming?",
+        "Answer": "A data structure is a way to organize and store data in a specific format, making it efficient to retrieve and manipulate. Data structures are essential for managing and working with data in programs."
+      },
+      {
+        "Question": "What is an array in programming, and how do you declare one?",
+        "Answer": "An array is a linear data structure that stores a collection of elements of the same data type. You can declare an array in most programming languages by specifying its type and name, e.g., 'int[] numbers;' in C# or 'let numbers = [];' in JavaScript."
+      },
+      {
+        "Question": "What is a linked list, and how does it differ from an array?",
+        "Answer": "A linked list is a data structure that consists of nodes, where each node stores data and a reference (or link) to the next node in the sequence. Unlike arrays, linked lists don't require contiguous memory allocation and can grow dynamically."
+      },
+      {
+        "Question": "What is a stack and how does it work?",
+        "Answer": "A stack is a linear data structure that follows the Last-In-First-Out (LIFO) principle. It allows elements to be pushed onto the top and popped off from the top. Stacks are often used for managing function calls and undo operations."
+      },
+      {
+        "Question": "What is a queue and how does it work?",
+        "Answer": "A queue is a linear data structure that follows the First-In-First-Out (FIFO) principle. Elements are added at the rear (enqueue) and removed from the front (dequeue). Queues are commonly used for task scheduling and breadth-first search algorithms."
+      },
+      {
+        "Question": "What is a sorting algorithm, and what are some common sorting algorithms?",
+        "Answer": "A sorting algorithm is an algorithm that arranges elements in a specific order, such as ascending or descending. Common sorting algorithms include Bubble Sort, Insertion Sort, Selection Sort, Merge Sort, and Quick Sort."
+      },
+      {
+        "Question": "What is a searching algorithm, and what are some common searching algorithms?",
+        "Answer": "A searching algorithm is an algorithm used to find the location or presence of a specific element in a collection of data. Common searching algorithms include Linear Search, Binary Search, and Hashing."
+      },
+      {
+        "Question": "What is time complexity and space complexity in algorithm analysis?",
+        "Answer": "Time complexity measures the amount of time an algorithm takes to run based on the size of its input. Space complexity measures the amount of memory an algorithm uses. Big O notation is often used to express time and space complexity."
+      },
+      {
+        "Question": "When would you use an array over a linked list, and vice versa?",
+        "Answer": "You would use an array when you need fast random access to elements and the size of the collection is fixed or known in advance. You would use a linked list when you need dynamic resizing or frequent insertions and deletions."
+      }
+    ]
+  }
+]

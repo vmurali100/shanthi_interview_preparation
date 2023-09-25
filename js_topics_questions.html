@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .answer,.question{
+            list-style: none;
+        }
+        .answer{
+            margin: 5px 0 25px 25px;
+        }
+        .question{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+  
+    <select name="" id="allTopics" onchange="handleChange()"></select>
+    <div id="topicdetails">
+
+    </div>
+    <script>
+        var allTopicsDetails = []
+        fetch('./js_topicquestions.json').then((res)=>res.json()).then(data=>{
+            console.log(data)
+            allTopicsDetails=data;
+            allTopicsDetails.forEach((topic)=>{
+                var myopt = document.createElement("option");
+                myopt.innerHTML = topic.Topic;
+                myopt.setAttribute("value",topic.Topic);
+                document.querySelector("#allTopics").appendChild(myopt);
+            })
+        })
+        function handleChange(){
+            var selectedValue = document.querySelector("#allTopics").value ;
+            var selectedObject = allTopicsDetails.find((obj)=>obj.Topic == selectedValue)
+            displayQuestions(selectedObject)
+        }
+
+        function displayQuestions(selectedObject){
+            document.getElementById("topicdetails").innerHTML = ""
+            console.log(selectedObject)
+            var myTopic = document.createElement("h3");
+            var myTopicDesc= document.createElement("p");
+            var myUl = document.createElement("ul")
+
+            selectedObject.Questions.forEach((obj,i)=>{
+                var myQli = document.createElement("li");
+                myQli.setAttribute("class","question")
+                myQli.innerHTML = (i+1)+". "+obj.Question;
+                var myAnsLi = document.createElement("li")
+                myAnsLi.innerHTML = obj.Answer
+                myAnsLi.setAttribute("class","answer")
+                myUl.appendChild(myQli)
+                myUl.appendChild(myAnsLi)
+            })
+            myTopic.innerHTML = selectedObject.Topic;
+            myTopicDesc.innerHTML=selectedObject.Description;
+            document.getElementById("topicdetails").appendChild(myTopic);
+            document.getElementById("topicdetails").appendChild(myTopicDesc)
+            document.getElementById("topicdetails").appendChild(myUl)
+        }
+    </script>
+</body>
+</html>
