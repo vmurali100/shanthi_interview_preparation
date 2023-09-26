@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="getuser()">getuser</button>
+    <script>
+      function getuser() {
+        var api_url = "https://random-data-api.com/api/v2/banks?size=10";
+
+        var shanthi = new XMLHttpRequest();
+        shanthi.open("GET", api_url);
+        shanthi.send();
+        shanthi.onreadystatechange = function () {
+          if (shanthi.readyState == 4 && shanthi.status == 200) {
+            console.log(JSON.parse(shanthi.response));
+          }
+        };
+      }
+    </script>
+
+    <button onclick="adduser()">adduser</button>
+    <script>
+      function adduser() {
+        var api_url = "https://random-data-api.com/api/v2/banks?size=10";
+        var sss = new XMLHttpRequest();
+        sss.open("GET", api_url);
+        sss.send();
+        sss.onreadystatechange = function () {
+          if (sss.readyState == 4 && sss.status == 200) {
+            console.log(JSON.parse(sss.response));
+          }
+        };
+      }
+    </script>
+  </body>
+</html>

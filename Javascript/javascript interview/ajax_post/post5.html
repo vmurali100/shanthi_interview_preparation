@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">fname:</label>
+        <input type="text" id="fname">
+        <label for="">lname:</label>
+        <input type="text" id="lname">
+        <button onclick="adduser()" type="button" ></button>
+    </form>
+    <script>
+    function adduser(){
+         var api_url="http://localhost:3000/users";
+         var shanthi=new XMLHttpRequest;
+
+         var person={
+            fname:document.getElementById("fname").value,
+            lname:document.getElementById("lname".value),
+         }
+         shanthi.open("POST",api_url)
+         shanthi.setRequestHeader("content_type","application")
+         shanthi.send(JSON.stringify(person));
+
+         shanthi.onreadystatechange=function(){
+            if( shanthi.readyState==4 && shanthi.status==201){
+                console.log("shanthi is successful")
+            }
+         }
+
+    }
+
+    </script>
+    
+</body>
+</html>

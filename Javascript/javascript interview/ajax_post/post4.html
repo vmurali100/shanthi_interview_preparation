@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">fname</label>
+        <input type="text" id="fname">
+        <label for="">lname</label>
+        <input type="text" id="lname">
+        <button onclick="adduser()" type="button"> submit</button>
+    </form>
+    <script>
+        function adduser(){
+            var api_url="http://localhost:3000/users";
+            var people=new XMLHttpRequest;
+              
+            var person={
+                fname:document.getElementById("fname"),
+                lname:document.getElementById("lname"),
+            } 
+
+            people.open("POST",api_url)
+            people.setRequestHeader("content_type","application")
+            people.send(JSON.stringify(person))
+
+            people.onreadystatechange=function(){
+                if(people.readyState==4 &&people.status==201);
+                console.log("people create successfully")
+
+            }
+
+
+              
+
+}
+
+    </script>
+</body>
+</html>
