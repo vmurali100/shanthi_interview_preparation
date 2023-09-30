@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="fname">fname</label>
+      <input type="text" id="fname" />
+      <label for="lname">lname</label>
+      <input type="text" id="lname" />
+      <button onclick="adduser()" type="button">adduser</button>
+    </form>
+    <button onclick="getuser()">getuser</button>
+    <button onclick="deleteuser()">deleteuser</button>
+    <script>
+      function getuser() {
+        var api_url = "https://random-data-api.com/api/v2/addresses?size=10";
+        var person = new XMLHttpRequest();
+
+        person.open("GET", api_url);
+        person.send();
+
+        person.onreadystatechange = function () {
+          if (person.readyState == 4 && person.status == 200) {
+            console.log(JSON.parse(person.response));
+          }
+        };
+      }
+      function adduser() {
+        var api_url = "https://random-data-api.com/api/v2/addresses?size=10";
+        var student = new XMLHttpRequest();
+
+        var package = {
+          fname: document.getElementById("fname").value,
+          lname: document.getElementById("lname").value,
+        };
+        student.open("POST", api_url);
+        student.setRequestHeader("content-type", "application");
+        student.send(JSON.stringify(student));
+
+        student.onreadystatechange = function () {
+          if (student.readyState == 4 && stydent.status == 200) {
+            console.log("student is succefull");
+          }
+        };
+      }
+      function deleteuser() {
+        var api_url = "https://random-data-api.com/api/v2/addresses?size=10";
+        var people = new XMLHttpRequest();
+
+        people.open("DELETE", api_url + 2);
+        people.send();
+
+        people.onreadystatechange = function () {
+          if (people.readyState == 4 && people.status == 200) {
+            console.log(deleteuser);
+          }
+        };
+      }
+    </script>
+  </body>
+</html>

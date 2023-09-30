@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="fname">fname:</label>
+      <input type="text" id="fname" />
+      <label for="lname">lname:</label>
+      <input type="text" id="lname" />
+      <button onclick="createuser()" type="button">createuser</button>
+    </form>
+    <button onclick="deleteuser()">deleteuser</button>
+
+    <button onclick="getuser()">getuser</button>
+    <script>
+      function getuser() {
+        var api_url = "https://random-data-api.com/api/v2/users?size=10";
+        var person = new XMLHttpRequest();
+
+        person.open("GET", api_url);
+        person.send();
+
+        var onreadystatechange = function () {
+          if (person.readyState == 4 && person.status == 200) {
+            console.log(JSON.parse(person.response));
+          }
+        };
+      }
+
+      function createuser() {
+        var api_url = "http://localhost:3000/users";
+        var createuserdetails = new XMLHttpRequest();
+
+        var people = {
+          fname: document.getElementById("fname"),
+          lname: document.getElementById("lname"),
+        };
+
+        createuserdetails.open("POST", api_url);
+        createuserdetails.setRequestHeader("content_type", "application");
+        createuserdetails.send(JSON.stringify(people));
+
+        var onreadystatechange = function () {
+          if (people.readyState == 4 && status == 200) {
+            console.log("successfilly created");
+          }
+        };
+      }
+
+      function deleteuser() {
+        var api_url = "http://localhost:3000/users";
+        var Deletedetails = new XMLHttpRequest();
+
+        Deletedetails.open("DELETE", api_url + 3);
+        Deletedetails.send();
+        var onreadystatechange = function () {
+          if (Deletedetails.readyState == 4 && Deletedetails.status == 200) {
+            console.log(deleteuser);
+          }
+        };
+      }
+    </script>
+  </body>
+</html>

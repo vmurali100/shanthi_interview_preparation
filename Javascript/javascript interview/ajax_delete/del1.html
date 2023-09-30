@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="fname">fname:</label>
+      <input type="text" name="" id="fname" />
+      <label for="lname">lname:</label>
+      <input type="text" id="lname" />
+      <button onclick="enduser()" type="button">enduser</button>
+    </form>
+    <button onclick="getUsers()">Get users</button>
+    <button onclick="deleteuser()">deleteuser</button>
+    <hr>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>account number</th>
+          <th>Bankname</th>
+          <th>Iban </th>
+          <th>Id  </th>
+          <th>Routing number</th>
+          <th>Swift_bic </th>
+          <th>Uid</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+    <script>
+      //TO Get the Data From API
+      function getUsers() {
+        var api_url = "https://random-data-api.com/api/v2/banks?size=10";
+        var users = new XMLHttpRequest();
+
+        users.open("GET", api_url);
+        users.send();
+
+        users.onreadystatechange = function () {
+          if (users.readyState == 4 && users.status == 200) {
+            displayUsers(JSON.parse(users.response))
+          }
+        };
+      }
+
+      // Display the Data 
+
+      function displayUsers(allusers){
+        console.log(allusers.length);
+        allusers.forEach((user)=>{
+          console.log(user)
+          var myTr = document.createElement("tr")
+          for(a in user){
+            var myTd = document.createElement("td");
+            myTd.innerHTML = user[a]
+            myTr.appendChild(myTd)
+          }
+          var editTd = document.createElement("td")
+          var editbutton=document.createElement("button")
+          editbutton.innerHTML="Edit user"
+          editTd.appendChild(editbutton)
+          myTr.appendChild(editTd)
+
+          var delTd=document.createElement("td")
+          var delbutton=document.createElement("button")
+          delbutton.innerHTML="Del user"
+          delTd.appendChild(delbutton)
+          myTr.appendChild(delTd)
+        document.querySelector("tbody").appendChild(myTr)
+        
+        })
+
+      }
+      function enduser() {
+        var api_url = "https://random-data-api.com/api/v2/";
+        var shanthi = new XMLHttpRequest();
+
+        var user = {
+          fname: document.getElementById("fname").value,
+          lname: document.getElementById("lname").value,
+        };
+
+        shanthi.open("POSt", api_url);
+        shanthi.setRequestHeader("content_type", "application/JSON");
+        shanthi.send(JSON.stringify(user));
+
+        shanthi.onreadystatechange = function () {
+          if (shanthi.readyState == 4 && shanthi.status == 200) {
+            console.log("shanthi is successfull");
+          }
+        };
+      }
+
+      function deleteuser() {
+        var api_url = "https://random-data-api.com/api/v2/9";
+        var thiyash = new XMLHttpRequest();
+
+        thiyash.open("DELETE", api_url + 3);
+        thiyash.send();
+
+        thiyash.onreadystatechange = function () {
+          if (thiyash.readyState == 4 && thiyash.status == 200) {
+            console.log(deleteuser);
+          }
+        };
+      }
+    </script>
+  </body>
+</html>
