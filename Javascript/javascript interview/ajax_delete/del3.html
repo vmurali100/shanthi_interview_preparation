@@ -14,19 +14,33 @@
       <button onclick="createuser()" type="button">createuser</button>
     </form>
     <button onclick="deleteuser()">deleteuser</button>
-
     <button onclick="getuser()">getuser</button>
+
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>fname</th>
+          <th>lname</th>
+          <th>Edit</th>
+          <th>Delete</th>
+
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
     <script>
       function getuser() {
-        var api_url = "https://random-data-api.com/api/v2/users?size=10";
+        var api_url = "http://localhost:3000/users"  //creating instance
         var person = new XMLHttpRequest();
 
         person.open("GET", api_url);
         person.send();
 
-        var onreadystatechange = function () {
+        person.onreadystatechange = function () {
           if (person.readyState == 4 && person.status == 200) {
             console.log(JSON.parse(person.response));
+            displayusers(JSON.parse(person.response))
           }
         };
       }
@@ -36,20 +50,22 @@
         var createuserdetails = new XMLHttpRequest();
 
         var people = {
-          fname: document.getElementById("fname"),
-          lname: document.getElementById("lname"),
+          fname: document.getElementById("fname").value,
+          lname: document.getElementById("lname").value,
         };
 
         createuserdetails.open("POST", api_url);
-        createuserdetails.setRequestHeader("content_type", "application");
+        createuserdetails.setRequestHeader("content-type", "application/json");
         createuserdetails.send(JSON.stringify(people));
 
-        var onreadystatechange = function () {
-          if (people.readyState == 4 && status == 200) {
+        createuserdetails.onreadystatechange = function () {
+          if (people.readyState == 4 && status == 201) {
             console.log("successfilly created");
+            
           }
         };
       }
+      getuser() 
 
       function deleteuser() {
         var api_url = "http://localhost:3000/users";
@@ -57,11 +73,36 @@
 
         Deletedetails.open("DELETE", api_url + 3);
         Deletedetails.send();
-        var onreadystatechange = function () {
+        Deletedetails.onreadystatechange = function () {
           if (Deletedetails.readyState == 4 && Deletedetails.status == 200) {
             console.log(deleteuser);
           }
         };
+      }
+      function displayusers(alluser){
+        alluser.forEach((user) => {
+          var myTr = document.createElement("tr")
+          for(a in user){
+            var myTd = document.createElement("td");
+            myTd.innerHTML = user[a]
+            myTr.appendChild(myTd)
+          }
+          var editTd = document.createElement("td")
+          var editbutton=document.createElement("button")
+          editbutton.innerHTML="Edit user"
+          editTd.appendChild(editbutton)
+          myTr.appendChild(editTd)
+
+          var delTd=document.createElement("td")
+          var delbutton=document.createElement("button")
+          delbutton.innerHTML="Del user"
+          delTd.appendChild(delbutton)
+          myTr.appendChild(delTd)
+        document.querySelector("tbody").appendChild(myTr)
+        
+      
+        });
+
       }
     </script>
   </body>

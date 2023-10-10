@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="fname">fname</label>
+        <input type="text" id="fname">
+        <label for="lname">lname</label>
+        <input type="text" id="lname">
+        <button onclick="createuser()">createuser</button>
+
+    </form>
+    <button onclick="getusers()">getuser</button>
+
+    <script>
+        function getusers(){
+            var api_url="http://localhost:3000/users"
+            var getusersdeclarations= new XMLHttpRequest
+
+            getusersdeclarations.open("GET",api_url)
+            getusersdeclarations.send()
+
+            getusersdeclarations.onreadystatechange=function(){
+                if(getusersdeclarations.readyState==4 && getusersdeclarations.status==200){
+                    console.log(JSON.parse(getusersdeclarations.response))
+                }
+            }
+        }
+
+        function createuser(){
+            var api_url="http://localhost:3000/users"
+            var createuserdetails=new XMLHttpRequest
+
+            var person={
+                fname:document.getElementById("fname").value,
+                lname:document.getElementById("lname").value,
+            }
+             createuserdetails.open("POST",api_url)
+             createuserdetails.setRequestHeader("content-type","application/json"),            
+              createuserdetails.send(JSON.stringify(person))
+        }
+
+        createuserdetails.onreadystatechange=function(){
+            if(createuserdetails.readyState==4 && createuserdetails.status==201){
+                console.log("person is xucceessfully completed")
+
+            }
+        }
+    </script>
+
+    
+    
+
+
+
+    
+</body>
+</html>
